@@ -1,0 +1,12 @@
+# dataset files
+*.npy
+
+# model files
+models
+
+# compiled python files
+*.pyc
+
+# other
+.vscode
+job_result.json

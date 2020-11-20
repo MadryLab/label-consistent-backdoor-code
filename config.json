@@ -1,0 +1,37 @@
+{
+  "_comment": "===== MODEL CONFIGURATION =====",
+  "model_dir": "models/output",
+
+  "_comment": "===== TRAINING CONFIGURATION =====",
+  "random_seed": 4557077,
+  "max_num_training_steps": 100000,
+  "num_output_steps": 100,
+  "num_summary_steps": 100,
+  "num_checkpoint_steps": 1000,
+  "training_batch_size": 50,
+  "learning_rates": [0.1, 0.01, 0.001],
+  "learning_rate_boundaries": [40000, 60000],
+
+  "_comment": "===== EVAL CONFIGURATION =====",
+  "num_eval_examples": 10000,
+  "eval_batch_size": 200,
+  "eval_on_cpu": true,
+  "num_eval_steps": 1000,
+
+  "_comment": "===== DATASET CONFIGURATION =====",
+  "clean_dataset_dir": "clean_dataset",
+  "already_poisoned_dataset_dir": "already_poisoned_dataset",
+  "augment_dataset": false,
+  "augment_standardization": true,
+  "augment_flip": true,
+  "augment_padding": 4,
+  "target_class": 0,
+
+  "_comment": "===== GENERATING POISONED DATASET CONFIGURATION =====",
+  "poisoning_base_train_images": "fully_poisoned_training_datasets/two_300.npy",
+  "poisoning_proportion": 1.0,
+  "poisoning_target_class": 0,
+  "poisoning_trigger": "bottom-right",
+  "poisoning_reduced_amplitude": null,
+  "poisoning_output_dir": "already_poisoned_dataset"
+}
